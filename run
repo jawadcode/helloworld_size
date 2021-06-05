@@ -3,7 +3,7 @@
 gcc -static -O3 c/main.c -o c/c.out && strip --strip-all c/c.out
 g++ -static -O3 cpp/main.cpp -o cpp/cpp.out && strip --strip-all cpp/cpp.out
 rustc -C opt-level=3 rust/main.rs -o rust/rust.out && strip --strip-all rust/rust.out
-zig build-exe -O ReleaseFast -static -femit-bin=zig/zig.out zig/main.zig && strip --strip-all zig/zig.out
+zig build-exe -static -femit-bin=zig/zig.out zig/main.zig && strip --strip-all zig/zig.out
 go build -o go/go.out go/main.go && strip --strip-all go/go.out
 
 rm -rf zig/zig-cache
